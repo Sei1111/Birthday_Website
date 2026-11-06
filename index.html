@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#33271f">
+    <meta name="description" content="A little autumn birthday gift made for Xin.">
+    <title>A Little Autumn Gift | Xin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+<main class="story-container">
+
+    <div class="ambient-scene" aria-hidden="true">
+        <div class="ambient-sun"></div>
+        <div class="ambient-hill hill-back"></div>
+        <div class="ambient-hill hill-front"></div>
+        <div class="ambient-branch">❧</div>
+        <div class="ambient-glow"></div>
+    </div>
+
+    <div class="particle-layer" id="particle-layer" aria-hidden="true"></div>
+
+    <!-- SCENE 1: WELCOME -->
+    <section class="scene active" id="scene-welcome" hidden>
+        <div class="scene-content">
+            <div class="scene-ornament">✦</div>
+            <p class="eyebrow">A LITTLE AUTUMN GIFT</p>
+            <h1>For you,<br>Xin.</h1>
+
+            <p class="subtitle">
+                Some things are worth keeping.
+                This little corner of the world is yours.
+            </p>
+
+            <p class="date-label">November 10, 2026</p>
+
+            <div class="dialogue-box">
+                <p class="dialogue-name">Narrator</p>
+                <p class="dialogue-text" data-dialogue="Somewhere between the falling leaves and the last warmth of autumn, a little story was waiting for you."></p>
+                <button class="dialogue-skip" type="button">Show text</button>
+            </div>
+
+            <button class="primary-button" data-next="memories">
+                Begin our story →
+            </button>
+
+            <p class="footer-note">Made with care, just for you.</p>
+
+            <button class="easter-egg star-egg" data-egg="star" aria-label="A hidden star">✧</button>
+        </div>
+    </section>
+
+    <!-- SCENE 2: MEMORY JOURNAL -->
+    <section class="scene" id="scene-memories" hidden>
+        <div class="scene-content wide-content">
+            <p class="eyebrow">CHAPTER ONE · A LITTLE JOURNAL</p>
+            <h2>A collection of little things.</h2>
+
+            <p class="story-text">
+                Not every meaningful thing needs a photograph.
+                Some things are better kept in words.
+            </p>
+
+            <p class="gallery-instruction">
+                There are a few things I'd like you to know.
+            </p>
+
+            <div class="memory-gallery">
+                <button class="memory-card" data-memory="0" aria-pressed="false">
+                    <span class="memory-art art-one">❀</span>
+                    <span class="memory-card-title">The little things</span>
+                    <span class="memory-card-caption">You are appreciated</span>
+                </button>
+
+                <button class="memory-card" data-memory="1" aria-pressed="false">
+                    <span class="memory-art art-two">☕</span>
+                    <span class="memory-card-title">On the difficult days</span>
+                    <span class="memory-card-caption">A little encouragement</span>
+                </button>
+
+                <button class="memory-card" data-memory="2" aria-pressed="false">
+                    <span class="memory-art art-three">♡</span>
+                    <span class="memory-card-title">At your own pace</span>
+                    <span class="memory-card-caption">Your journey is your own</span>
+                </button>
+
+                <button class="memory-card" data-memory="3" aria-pressed="false">
+                    <span class="memory-art art-four">✧</span>
+                    <span class="memory-card-title">More chapters ahead</span>
+                    <span class="memory-card-caption">A wish for the future</span>
+                </button>
+            </div>
+
+            <article class="memory-detail" id="memory-detail" aria-live="polite" hidden>
+                <p class="eyebrow" id="memory-number">A LITTLE NOTE</p>
+                <h3 id="memory-detail-title"></h3>
+                <p id="memory-detail-text"></p>
+                <p class="memory-note" id="memory-detail-note"></p>
+            </article>
+
+            <p class="gallery-footer">Four little pages, kept just for you. 🍂</p>
+
+            <div class="dialogue-box">
+                <p class="dialogue-name">A little thought</p>
+                <p class="dialogue-text" data-dialogue="Take your time looking through these. Each page holds something I wanted you to remember."></p>
+                <button class="dialogue-skip" type="button">Show text</button>
+            </div>
+
+            <button class="primary-button" data-next="letter">There's something else →</button>
+            <button class="text-button" data-back="welcome">← Go back</button>
+        </div>
+    </section>
+
+    <!-- SCENE 3: SEALED LETTER -->
+    <section class="scene" id="scene-letter" hidden>
+        <div class="scene-content">
+            <p class="eyebrow">A LETTER FOR YOU</p>
+            <h2>Something I'd like you to read.</h2>
+
+            <p class="story-text">
+                I left something here for you.
+                Go ahead, open it.
+            </p>
+
+            <button class="envelope-button" id="open-letter" aria-expanded="false" aria-controls="letter-card">
+                <span class="envelope" aria-hidden="true">
+                    <span class="envelope-flap"></span>
+                    <span class="envelope-heart">♡</span>
+                </span>
+                <span class="envelope-label">A letter addressed to Xin</span>
+                <span class="envelope-hint">Click to open</span>
+            </button>
+
+            <article class="letter-card" id="letter-card" hidden>
+                <div class="letter-decoration">✦</div>
+                <p>Hey, Xin.</p>
+
+                <p>
+                    Happy birthday! I wanted to make something
+                    a little different for you this year.
+                </p>
+
+                <p>
+                    I'm glad our paths crossed, and I'm grateful
+                    for the little moments we've shared.
+                    I hope this new chapter of your life brings
+                    you good things, peaceful days, and plenty
+                    of reasons to smile.
+                </p>
+
+                <p>
+                    You deserve to have people and moments
+                    in your life that make it feel a little warmer,
+                    even on the difficult days.
+                </p>
+
+                <p>
+                    Thank you for being my friend.
+                    I hope this little gift makes you smile.
+                </p>
+
+                <p class="letter-signature">
+                    With love and appreciation,<br>
+                    your friend 🍂
+                </p>
+            </article>
+
+            <div class="dialogue-box">
+                <p class="dialogue-name">Narrator</p>
+                <p class="dialogue-text" data-dialogue="Some words are easier to write than to say. I hope these find their way to you."></p>
+                <button class="dialogue-skip" type="button">Show text</button>
+            </div>
+
+            <button class="primary-button" data-next="birthday">One last surprise →</button>
+            <button class="text-button" data-back="memories">← Back to memories</button>
+
+            <button class="easter-egg letter-egg" data-egg="letter" aria-label="A hidden message">✦</button>
+        </div>
+    </section>
+
+    <!-- SCENE 4: BIRTHDAY -->
+    <section class="scene" id="scene-birthday" hidden>
+        <div class="scene-content">
+            <div class="scene-ornament">✧</div>
+            <p class="eyebrow">CHAPTER TWO</p>
+            <h2>Make a wish, Xin.</h2>
+
+            <div class="cake-area">
+                <div class="cake" id="birthday-cake" aria-label="Birthday cake with unlit candles">
+                    <div class="candles">
+                        <span class="candle"><i></i></span>
+                        <span class="candle"><i></i></span>
+                        <span class="candle"><i></i></span>
+                    </div>
+                    <div class="cake-top"></div>
+                    <div class="cake-body">
+                        <div class="icing"></div>
+                        <div class="cake-decoration">✦　♡　✦</div>
+                    </div>
+                    <div class="cake-plate"></div>
+                </div>
+            </div>
+
+            <p class="story-text">
+                Another year, another chapter.
+                I hope this one is kind to you.
+            </p>
+
+            <p class="story-text">
+                May you find little reasons to be happy,
+                people who make you feel understood,
+                and moments worth remembering.
+            </p>
+
+            <div class="cake-controls">
+                <button class="secondary-button" id="light-candles">Light the candles</button>
+                <button class="secondary-button" id="blow-candles" disabled>Make a wish & blow</button>
+            </div>
+
+            <p class="cake-message" id="cake-message" aria-live="polite">
+                A little birthday wish is waiting.
+            </p>
+
+            <div class="secret-container">
+                <button class="leaf-button" id="secret-leaf"
+                    aria-label="Reveal a hidden birthday message"
+                    aria-expanded="false" aria-controls="secret-message">🍂</button>
+
+                <p class="secret-hint">Psst... there's something hidden here.</p>
+
+                <p class="secret-message" id="secret-message" hidden>
+                    Even the smallest moments can mean a lot.
+                    I'm glad you're part of my story, Xin. ♡
+                </p>
+            </div>
+
+            <button class="primary-button" data-next="ending">Keep this little memory →</button>
+            <button class="text-button" data-back="letter">← Read the letter again</button>
+        </div>
+    </section>
+
+    <!-- SCENE 5: ENDING -->
+    <section class="scene" id="scene-ending" hidden>
+        <div class="scene-content">
+            <div class="scene-ornament">❧</div>
+            <p class="eyebrow">UNTIL THE NEXT CHAPTER</p>
+            <h2>Some things are worth keeping.</h2>
+
+            <p class="subtitle">
+                And I'm glad this little memory gets to be
+                one of them.
+            </p>
+
+            <div class="dialogue-box">
+                <p class="dialogue-name">Narrator</p>
+                <p class="dialogue-text" data-dialogue="The pages may end here, but there are still so many chapters ahead. I hope you enjoy every one of them."></p>
+                <button class="dialogue-skip" type="button">Show text</button>
+            </div>
+
+            <p class="story-text">
+                Happy birthday, Xin.
+                Here's to another year of being you.
+            </p>
+
+            <button class="primary-button" data-next="welcome">Start the story again ↺</button>
+            <p class="footer-note">A little autumn gift, made just for you.</p>
+
+            <button class="easter-egg ending-egg" data-egg="ending" aria-label="A final hidden message">✧</button>
+        </div>
+    </section>
+
+    <!-- EASTER EGG MESSAGE -->
+    <div class="egg-popup" id="egg-popup" role="status" aria-live="polite" hidden>
+        <p class="eyebrow">A LITTLE SECRET</p>
+        <p id="egg-text"></p>
+        <button class="text-button" id="close-egg">Close</button>
+    </div>
+
+    <!-- STORY PROGRESS -->
+    <nav class="story-navigation" aria-label="Story navigation">
+        <span id="scene-counter">01 / 05</span>
+        <div class="progress-track" aria-hidden="true">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <span class="navigation-label">YOUR LITTLE STORY</span>
+    </nav>
+
+</main>
+</body>
+</html>
